@@ -1,0 +1,48 @@
+=====================================
+DOCUMENTATION TEMPLATE HTML GENERATOR
+=====================================
+A simple bash script documentation site generator.
+
+FOLDER STRUCTURE
+================
+
+This is a simple way to organize a software/other things documentation.
+
+documentation_folder
+    \
+     +- html/
+        |- index.html
+        |- files/
+        '- style.css
+     +- files-order.txt
+     +- script.sh
+     +- source/
+        |- file1.html
+        |- file2.html
+        '- filen.html
+
+Each source/*.html file is a section of the documentation.
+
+ +-------
+>|Each heading tag should have an id="" attibute to be rendered in the Table of Contents.
+ +-------
+
+The script.sh organizes everything and creates a one page in index.html with all
+    the content, organized by section ID, with a table of contents in the left.
+
+
+The toc.txt file contains the organization of the files, and this is the structure:
+
+    +---------------------------+
+    | # filename: toc.txt       |
+    |                           |
+    | # this is a comment       |
+    |                           |
+    | filename1.html            | \
+    | filename2.html            | |>> this is the table of contents order.
+    | filename3.html            | /
+    +---------------------------+
+
+
+And each file is a section with <h2 id="title-name">Title Name</h2> heading tag
+
